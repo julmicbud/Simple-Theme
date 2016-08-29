@@ -52,6 +52,7 @@ footer{
 article.post{
 	border-bottom:1px #ccc solid;
 	overflow:hidden;
+	padding-bottom:20px;
 }
 
 article.post a.button{
