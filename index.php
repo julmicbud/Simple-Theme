@@ -1,34 +1,23 @@
-<!DOCTYPE <!DOCTYPE HTML>
-<html <?php language_attributes(); ?>>
-
-<head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<title><?php bloginfo('name'); ?></title>
-	<link rel="stylesheet" type="text/css href="<?php bloginfo('stylesheet_url'); ?>" />
-	<?php wp_head(); ?>
-</head>
-
-<body>
-<header>
-	<h1><?php bloginfo('name'); ?></h1>
-	<span><?php bloginfo('description'); ?></span>
-</header>	
+<?php get_header(); ?>	
 	<div class="main">
-		<?php if(have_posts()) : ?>
-			<?php while(have_posts()): the_post(); ?>
-				<h3><?php the_title(); ?></h3>
-				<div class="meta">
-					Created By <?php the_author(); ?> on <?php the_time('F j, Y g:i a'); ?>
-				</div>
-				<?php the_content(); ?>
-			<?php endwhile; ?>
-		<?php else : ?>
-			<?php echo wpautop('Sorry, No posts were found'); ?>
-		<?php endif; ?>
+		<div class="conatiner">
+			<?php if(have_posts()) : ?>
+				<?php while(have_posts()): the_post(); ?>
+					<article class="post">
+						<h3>
+							<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+							</a>
+						</h3>
+						<div class="meta">
+							Created By <?php the_author(); ?> on <?php the_time('F j, Y g:i a'); ?>
+						</div>
+						<?php the_content(); ?>
+					</article>
+				<?php endwhile; ?>
+			<?php else : ?>
+				<?php echo wpautop('Sorry, No posts were found'); ?>
+			<?php endif; ?>
 		</div>
-		<footer>
-			<p>&copy; <?php the_date('Y'); ?></p>
-		</footer>
-</body>
-
-</html>
+	</div>
+<?php get_footer(); ?>
