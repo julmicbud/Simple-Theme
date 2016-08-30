@@ -39,9 +39,21 @@ header h1{
 	overflow:auto;
 }
 
+.clr{
+	clear:both;
+}
+
 .main{
 	margin:15px 0;
+	float:left;
+	width:68%;
 }
+
+.sidebar{
+	float:right;
+	width:28%;
+}
+
 
 footer{
 	background:#393939;
@@ -73,4 +85,26 @@ article.post a.button{
 .post-thumbnail img{
 	width:100%
 	height:auto;
+}
+
+.main-nav{
+	background:#000;
+	color:#fff;
+	padding:5px;
+}
+
+.main-nav ul{
+	margin:0;
+	padding:0;
+}
+
+.main-nav li{
+	list-style: none;
+	float:left;
+	padding-right: 15px;
+}
+
+.main-nav a{
+	color:#fff;
+	text-decoration:none;
 }

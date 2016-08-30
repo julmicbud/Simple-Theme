@@ -69,3 +69,30 @@ article.post a.button{
 	color:#fff;
 	padding:5px;
 }
+
+.post-thumbnail img{
+	width:100%
+	height:auto;
+}
+
+.main-nav{
+	background:#000;
+	color:#fff;
+	padding:5px;
+}
+
+.main-nav ul{
+	margin:0;
+	padding:0;
+}
+
+.main-nav li{
+	list-style: none;
+	float:left;
+	padding-right: 15px;
+}
+
+.main-nav a{
+	color:#fff;
+	text-decoration:none;
+}
